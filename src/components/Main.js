@@ -156,7 +156,10 @@ export default class Main extends React.Component {
 
     return (
       <div>
-        <a className="add-map">{addMapButtonText}</a>
+        <input type="file" id="add-map-input" className="hidden" />
+        <label class="add-map" for="add-map-input">
+          Add Map
+        </label>
 
         <a className="add-waypoint">{addWaypointButtonText}</a>
 
