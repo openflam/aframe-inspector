@@ -1,11 +1,11 @@
 @import './lib';
 
 body.aframe-inspector-opened,
-.toggle-edit
+.toggle-edit .add-map .add-waypoint
   font-family BlinkMacSystemFont, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif
 
 .wf-roboto-n4-active body.aframe-inspector-opened,
-.wf-roboto-n4-active .toggle-edit
+.wf-roboto-n4-active .toggle-edit .add-map .add-waypoint
   font-family BlinkMacSystemFont, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif
 
 body.aframe-inspector-opened
@@ -107,6 +107,38 @@ body.aframe-inspector-opened
     top 3px
     width 204px
     z-index 999999999
+  
+  .add-map
+    background-color #34702F
+    box-sizing content-box
+    color #FAFAFA
+    font-size 13px
+    left 25px
+    line-height normal
+    margin 0
+    padding 6px 10px
+    position fixed
+    text-align center
+    text-decoration none
+    top 100px
+    width 204px
+    z-index 9999
+  
+  .add-waypoint
+    background-color #FFB1A8
+    box-sizing content-box
+    color #141414
+    font-size 13px
+    left 25px
+    line-height normal
+    margin 0
+    padding 6px 10px
+    position fixed
+    text-align center
+    text-decoration none
+    top 150px
+    width 204px
+    z-index 9999
 
   .toggle-edithover
     background-color rgb(228, 43, 90)

@@ -22,8 +22,8 @@ export default class Main extends React.Component {
       isModalTexturesOpen: false,
       sceneEl: AFRAME.scenes[0],
       visible: {
-        scenegraph: true,
-        attributes: true
+        scenegraph: false,
+        attributes: false
       }
     };
 
@@ -151,12 +151,14 @@ export default class Main extends React.Component {
     const toggleButtonText = this.state.inspectorEnabled
       ? 'Back to Scene'
       : 'Inspect Scene';
+    const addMapButtonText = 'Load Map';
+    const addWaypointButtonText = 'Add Waypoint';
 
     return (
       <div>
-        <a className="toggle-edit" onClick={this.toggleEdit}>
-          {toggleButtonText}
-        </a>
+        <a className="add-map">{addMapButtonText}</a>
+
+        <a className="add-waypoint">{addWaypointButtonText}</a>
 
         {this.renderSceneGraphToggle()}
         {this.renderComponentsToggle()}
