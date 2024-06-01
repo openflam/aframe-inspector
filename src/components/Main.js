@@ -23,7 +23,7 @@ export default class Main extends React.Component {
       sceneEl: AFRAME.scenes[0],
       visible: {
         scenegraph: false,
-        attributes: false
+        attributes: true
       }
     };
 
@@ -158,12 +158,11 @@ export default class Main extends React.Component {
       <div>
         <input type="file" id="add-map-input" className="hidden" />
         <label class="add-map" for="add-map-input">
-          Add Map
+          {addMapButtonText}
         </label>
 
         <a className="add-waypoint">{addWaypointButtonText}</a>
 
-        {this.renderSceneGraphToggle()}
         {this.renderComponentsToggle()}
 
         <div
