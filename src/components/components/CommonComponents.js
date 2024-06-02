@@ -122,10 +122,7 @@ export default class CommonComponents extends React.Component {
 
     return (
       <Collapsible id="componentEntityHeader" className="commonComponents">
-        <div className="collapsible-header">
-          <EntityRepresentation entity={entity} />
-          {entityButtons}
-        </div>
+        <div className="collapsible-header"></div>
         <div className="collapsible-content">
           <div id="addComponentContainer">
             <p id="addComponentHeader">Waypoint Properties</p>
