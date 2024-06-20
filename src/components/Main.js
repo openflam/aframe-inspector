@@ -153,6 +153,7 @@ export default class Main extends React.Component {
       : 'Inspect Scene';
     const addMapButtonText = 'Load Map';
     const addWaypointButtonText = 'Add Waypoint';
+    const downloadWaypointsButtonText = 'Download Waypoints';
 
     return (
       <div>
@@ -162,6 +163,7 @@ export default class Main extends React.Component {
         </label>
 
         <a className="add-waypoint">{addWaypointButtonText}</a>
+        <a className="download-waypoints">{downloadWaypointsButtonText}</a>
 
         {this.renderComponentsToggle()}
 
