@@ -163,7 +163,11 @@ export default class Main extends React.Component {
           {addMapButtonText}
         </label>
 
-        <a className="load-waypoints">{loadWaypointsButtonText}</a>
+        <input type="file" id="load-waypoints-input" className="hidden" />
+        <label class="load-waypoints" for="load-waypoints-input">
+          {loadWaypointsButtonText}
+        </label>
+
         <a className="add-waypoint">{addWaypointButtonText}</a>
         <a className="download-waypoints">{downloadWaypointsButtonText}</a>
 
