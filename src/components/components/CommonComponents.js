@@ -47,7 +47,7 @@ export default class CommonComponents extends React.Component {
 
   renderCommonAttributes() {
     const entity = this.props.entity;
-    return ['position', 'rotation', 'scale', 'visible'].map((componentName) => {
+    return ['position'].map((componentName) => {
       const schema = AFRAME.components[componentName].schema;
       var data = entity.object3D[componentName];
       if (componentName === 'rotation') {
@@ -122,28 +122,12 @@ export default class CommonComponents extends React.Component {
 
     return (
       <Collapsible id="componentEntityHeader" className="commonComponents">
-        <div className="collapsible-header">
-          <EntityRepresentation entity={entity} />
-          {entityButtons}
-        </div>
+        <div className="collapsible-header"></div>
         <div className="collapsible-content">
-          <div className="propertyRow">
-            <label htmlFor="id" className="text">
-              ID
-            </label>
-            <InputWidget
-              onChange={changeId}
-              entity={entity}
-              name="id"
-              value={entity.id}
-            />
-          </div>
-          <div className="propertyRow">
-            <label className="text">class</label>
-            <span>{entity.getAttribute('class')}</span>
+          <div id="addComponentContainer">
+            <p id="addComponentHeader">Waypoint Properties</p>
           </div>
           {this.renderCommonAttributes()}
-          <Mixins entity={entity} />
         </div>
       </Collapsible>
     );

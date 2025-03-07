@@ -26,7 +26,7 @@ export default class ComponentsContainer extends React.Component {
     const entity = this.props.entity;
     const components = entity ? entity.components : {};
     const definedComponents = Object.keys(components).filter(function (key) {
-      return DEFAULT_COMPONENTS.indexOf(key) === -1;
+      return key === 'way_point'; // Only show way_point component
     });
 
     const renderedComponents = definedComponents.sort().map(function (key) {
@@ -44,7 +44,6 @@ export default class ComponentsContainer extends React.Component {
     return (
       <div className="components">
         <CommonComponents entity={entity} />
-        <AddComponent entity={entity} />
         {renderedComponents}
       </div>
     );

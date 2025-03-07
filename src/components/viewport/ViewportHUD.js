@@ -22,12 +22,6 @@ export default class ViewportHUD extends React.Component {
   }
 
   render() {
-    return (
-      <div id="viewportHud">
-        <p>
-          <EntityRepresentation entity={this.state.hoveredEntity} />
-        </p>
-      </div>
-    );
+    return <div id="viewportHud"></div>;
   }
 }

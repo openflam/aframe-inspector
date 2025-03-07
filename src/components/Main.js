@@ -23,7 +23,7 @@ export default class Main extends React.Component {
       sceneEl: AFRAME.scenes[0],
       visible: {
         scenegraph: false,
-        attributes: false
+        attributes: true
       }
     };
 
@@ -152,18 +152,25 @@ export default class Main extends React.Component {
       ? 'Back to Scene'
       : 'Inspect Scene';
     const addMapButtonText = 'Load Map';
+    const loadWaypointsButtonText = 'Load Waypoints';
     const addWaypointButtonText = 'Add Waypoint';
+    const downloadWaypointsButtonText = 'Download Waypoints';
 
     return (
       <div>
         <input type="file" id="add-map-input" className="hidden" />
         <label class="add-map" for="add-map-input">
-          Add Map
+          {addMapButtonText}
+        </label>
+
+        <input type="file" id="load-waypoints-input" className="hidden" />
+        <label class="load-waypoints" for="load-waypoints-input">
+          {loadWaypointsButtonText}
         </label>
 
         <a className="add-waypoint">{addWaypointButtonText}</a>
+        <a className="download-waypoints">{downloadWaypointsButtonText}</a>
 
-        {this.renderSceneGraphToggle()}
         {this.renderComponentsToggle()}
 
         <div
