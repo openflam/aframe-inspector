@@ -151,7 +151,8 @@ export default class Main extends React.Component {
     const toggleButtonText = this.state.inspectorEnabled
       ? 'Back to Scene'
       : 'Inspect Scene';
-    const addMapMeshButtonText = 'Load GLB';
+    const addMapMeshButtonText = 'Load Map (Mesh)';
+    const addMapPCDButtonText = 'Load Map (PCD)';
     const loadWaypointsButtonText = 'Load Waypoints';
     const addWaypointButtonText = 'Add Waypoint';
     const downloadWaypointsButtonText = 'Download Waypoints';
@@ -161,6 +162,11 @@ export default class Main extends React.Component {
         <input type="file" id="add-map-mesh" className="hidden" />
         <label class="add-map-mesh" for="add-map-mesh">
           {addMapMeshButtonText}
+        </label>
+
+        <input type="file" id="add-map-pcd" className="hidden" />
+        <label class="add-map-pcd" for="add-map-pcd">
+          {addMapPCDButtonText}
         </label>
 
         <input type="file" id="load-waypoints-input" className="hidden" />
